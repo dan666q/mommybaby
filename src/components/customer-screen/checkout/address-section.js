@@ -1,6 +1,0 @@
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import plus from '@/assets/icons/plus.svg';
-import AddressCard from './address-card';
-export default function AddressSection({ addressList }) {
-    return (_jsxs("div", { className: "user-address", children: [_jsxs("div", { className: "user-address__top", children: [_jsxs("div", { children: [_jsx("h2", { className: "user-address__title", children: "Shipping address" }), _jsx("p", { className: "user-address__desc", children: "Where should we deliver your order?" })] }), _jsxs("button", { className: "user-address__btn btn btn--primary btn--rounded btn--small js-toggle", "toggle-target": "#add-new-address", children: [_jsx("img", { src: plus, alt: "" }), "Add a new address"] })] }), _jsx("div", { className: "user-address__list", children: addressList ? (_jsxs(_Fragment, { children: [_jsx(AddressCard, {}), _jsx(AddressCard, {})] })) : (_jsx(_Fragment, { children: _jsxs("p", { className: "user-address__message flex gap-5", children: [_jsx("p", { children: "Not address yet." }), _jsx("a", { className: "user-address__link js-toggle", href: "#!", "toggle-target": "#add-new-address", children: "Add a new address" })] }) })) })] }));
-}
