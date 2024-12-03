@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-"build": "node -e \"const fs = require('fs'); fs.mkdirSync('dist', { recursive: true }); fs.writeFileSync('dist/index.html', '<h1>Force Deploy</h1>');\"",
+    "build": "node -e \"const fs = require('fs'), path = require('path'); fs.mkdirSync('dist', { recursive: true }); fs.readdirSync('src').forEach(file => { fs.copyFileSync(path.join('src', file), path.join('dist', file)); });\"",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
